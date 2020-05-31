@@ -40,11 +40,12 @@ Partial Class FormCLiente
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
-        Me.btnEiminar = New System.Windows.Forms.Button()
         Me.dataListado = New System.Windows.Forms.DataGridView()
         Me.eliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cbo = New System.Windows.Forms.ComboBox()
+        Me.btnEiminar = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,6 +149,7 @@ Partial Class FormCLiente
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnGuardar)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnEditar)
         Me.GroupBox1.Controls.Add(Me.btnNuevo)
@@ -165,7 +167,7 @@ Partial Class FormCLiente
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Location = New System.Drawing.Point(32, 25)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(318, 327)
+        Me.GroupBox1.Size = New System.Drawing.Size(318, 367)
         Me.GroupBox1.TabIndex = 14
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Cliente"
@@ -220,15 +222,6 @@ Partial Class FormCLiente
         Me.inexistente.TabStop = True
         Me.inexistente.Text = "Datos Inexistentes"
         '
-        'btnEiminar
-        '
-        Me.btnEiminar.Location = New System.Drawing.Point(389, 369)
-        Me.btnEiminar.Name = "btnEiminar"
-        Me.btnEiminar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEiminar.TabIndex = 17
-        Me.btnEiminar.Text = "Eliminar"
-        Me.btnEiminar.UseVisualStyleBackColor = True
-        '
         'dataListado
         '
         Me.dataListado.AllowUserToAddRows = False
@@ -264,6 +257,24 @@ Partial Class FormCLiente
         Me.cbo.Size = New System.Drawing.Size(121, 21)
         Me.cbo.TabIndex = 0
         Me.cbo.Text = "ci"
+        '
+        'btnEiminar
+        '
+        Me.btnEiminar.Location = New System.Drawing.Point(389, 369)
+        Me.btnEiminar.Name = "btnEiminar"
+        Me.btnEiminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEiminar.TabIndex = 17
+        Me.btnEiminar.Text = "Eliminar"
+        Me.btnEiminar.UseVisualStyleBackColor = True
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(13, 319)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 17
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'FormCLiente
         '
@@ -307,4 +318,5 @@ Partial Class FormCLiente
     Friend WithEvents btnEiminar As Button
     Friend WithEvents eliminar As DataGridViewTextBoxColumn
     Friend WithEvents inexistente As LinkLabel
+    Friend WithEvents btnGuardar As Button
 End Class

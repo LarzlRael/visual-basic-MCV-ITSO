@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\fcliente.vb" />
+    <Compile Include="Controlador\pCliente.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>

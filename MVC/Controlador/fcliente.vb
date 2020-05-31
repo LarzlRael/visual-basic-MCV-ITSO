@@ -24,4 +24,28 @@ Public Class fcliente
             desconectar()
         End Try
     End Function
+    Public Function Insertar(ByVal dts As pCliente) As Boolean
+        Try
+            conectado()
+            cmd = New SqlCommand("insertar_cliente")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.AddWithValue("@nombre", dts.gNombre)
+            cmd.Parameters.AddWithValue("@apellido", dts.gApellido)
+            cmd.Parameters.AddWithValue("@telefono", dts.gTelefono)
+            cmd.Parameters.AddWithValue("@direccion", dts.gdireccion)
+            cmd.Parameters.AddWithValue("@ci", dts.gci)
+            'cmd.Parameters.AddWithValue("@nombre", dts.gNombre)
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectar()
+        End Try
+    End Function
 End Class
