@@ -35,6 +35,7 @@ Partial Class FormCLiente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtid = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
@@ -45,7 +46,6 @@ Partial Class FormCLiente
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cbo = New System.Windows.Forms.ComboBox()
         Me.btnEiminar = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,6 +172,15 @@ Partial Class FormCLiente
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Cliente"
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.Location = New System.Drawing.Point(13, 319)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.TabIndex = 17
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
         'btnCancelar
         '
         Me.btnCancelar.Location = New System.Drawing.Point(210, 275)
@@ -266,15 +275,6 @@ Partial Class FormCLiente
         Me.btnEiminar.TabIndex = 17
         Me.btnEiminar.Text = "Eliminar"
         Me.btnEiminar.UseVisualStyleBackColor = True
-        '
-        'btnGuardar
-        '
-        Me.btnGuardar.Location = New System.Drawing.Point(13, 319)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 17
-        Me.btnGuardar.Text = "Guardar"
-        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'FormCLiente
         '

@@ -87,4 +87,53 @@
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub dataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataListado.CellContentClick
+        txtid.Text = dataListado.SelectedCells.Item(1).Value
+        txtnombre.Text = dataListado.SelectedCells.Item(2).Value
+        txtApellido.Text = dataListado.SelectedCells.Item(3).Value
+        txtDireccion.Text = dataListado.SelectedCells.Item(4).Value
+        txtTelefono.Text = dataListado.SelectedCells.Item(5).Value
+        txtCI.Text = dataListado.SelectedCells.Item(6).Value
+
+        btnEditar.Visible = True
+        btnGuardar.Visible = False
+
+
+    End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Dim resultado As DialogResult
+        resultado = MessageBox.Show("¿Desea modificar?", "MODIFICADO", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+
+        If resultado = DialogResult.OK Then
+            Try
+                Dim dts As New pCliente
+                Dim func As New fcliente
+                dts.gidCliente = txtid.Text
+                dts.gNombre = txtnombre.Text
+                dts.gApellido = txtApellido.Text
+                dts.gTelefono = txtTelefono.Text
+                dts.gdireccion = txtDireccion.Text
+                dts.gci = txtCI.Text
+
+                If func.editar(dts) Then
+                    MsgBox("Cliente Editado")
+                    mostrar()
+                    limpiar()
+                Else
+                    MsgBox("CLiente no modificado")
+                    mostrar()
+                    limpiar()
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        limpiar()
+    End Sub
 End Class
