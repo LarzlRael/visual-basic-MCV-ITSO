@@ -40,12 +40,13 @@ Partial Class FormCLiente
         Me.btnEditar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.checkEliminar = New System.Windows.Forms.CheckBox()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
         Me.dataListado = New System.Windows.Forms.DataGridView()
-        Me.eliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cbo = New System.Windows.Forms.ComboBox()
         Me.btnEiminar = New System.Windows.Forms.Button()
+        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -210,6 +211,7 @@ Partial Class FormCLiente
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.checkEliminar)
         Me.GroupBox2.Controls.Add(Me.inexistente)
         Me.GroupBox2.Controls.Add(Me.dataListado)
         Me.GroupBox2.Controls.Add(Me.txtBuscar)
@@ -220,6 +222,16 @@ Partial Class FormCLiente
         Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lista de Clientes"
+        '
+        'checkEliminar
+        '
+        Me.checkEliminar.AutoSize = True
+        Me.checkEliminar.Location = New System.Drawing.Point(111, 60)
+        Me.checkEliminar.Name = "checkEliminar"
+        Me.checkEliminar.Size = New System.Drawing.Size(78, 17)
+        Me.checkEliminar.TabIndex = 20
+        Me.checkEliminar.Text = "Eliminar fila"
+        Me.checkEliminar.UseVisualStyleBackColor = True
         '
         'inexistente
         '
@@ -237,18 +249,12 @@ Partial Class FormCLiente
         Me.dataListado.AllowUserToDeleteRows = False
         Me.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataListado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminar})
-        Me.dataListado.Location = New System.Drawing.Point(15, 68)
+        Me.dataListado.Location = New System.Drawing.Point(6, 83)
         Me.dataListado.Name = "dataListado"
         Me.dataListado.ReadOnly = True
         Me.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dataListado.Size = New System.Drawing.Size(696, 244)
         Me.dataListado.TabIndex = 18
-        '
-        'eliminar
-        '
-        Me.eliminar.HeaderText = "Eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
         '
         'txtBuscar
         '
@@ -275,6 +281,14 @@ Partial Class FormCLiente
         Me.btnEiminar.TabIndex = 17
         Me.btnEiminar.Text = "Eliminar"
         Me.btnEiminar.UseVisualStyleBackColor = True
+        '
+        'eliminar
+        '
+        Me.eliminar.HeaderText = "Eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
         '
         'FormCLiente
         '
@@ -316,7 +330,8 @@ Partial Class FormCLiente
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents cbo As ComboBox
     Friend WithEvents btnEiminar As Button
-    Friend WithEvents eliminar As DataGridViewTextBoxColumn
     Friend WithEvents inexistente As LinkLabel
     Friend WithEvents btnGuardar As Button
+    Friend WithEvents checkEliminar As CheckBox
+    Friend WithEvents eliminar As DataGridViewCheckBoxColumn
 End Class

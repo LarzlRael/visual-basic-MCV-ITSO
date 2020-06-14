@@ -73,7 +73,24 @@ Public Class fcliente
         Finally
             desconectar()
         End Try
-
-
     End Function
+
+    Public Function eliminar(ByVal dts As pCliente) As Boolean
+        Try
+            conectado()
+            cmd = New SqlCommand("eliminarCLiente")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = cnn
+            cmd.Parameters.Add("@idcliente", SqlDbType.NVarChar, 30).Value = dts.gidCliente
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
+
 End Class

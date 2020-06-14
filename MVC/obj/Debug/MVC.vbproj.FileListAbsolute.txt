@@ -2,7 +2,6 @@ c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\bin\Debug\MVC.exe.co
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\bin\Debug\MVC.exe
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\bin\Debug\MVC.pdb
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\bin\Debug\MVC.xml
-c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.vbprojResolveAssemblyReference.cache
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.Resources.resources
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.FormCLiente.resources
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.vbproj.GenerateResource.Cache

@@ -99,6 +99,11 @@
         btnEditar.Visible = True
         btnGuardar.Visible = False
 
+        If e.ColumnIndex = Me.dataListado.Columns.Item("eliminar").Index Then
+            Dim fila As DataGridViewCheckBoxCell = Me.dataListado.Rows(e.RowIndex).Cells("eliminar")
+            fila.Value = Not fila.Value
+        End If
+
 
     End Sub
 
@@ -138,7 +143,44 @@
         limpiar()
     End Sub
 
-    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+
+    Private Sub checkEliminar_CheckedChanged(sender As Object, e As EventArgs) Handles checkEliminar.CheckedChanged
+        If checkEliminar.CheckState = CheckState.Checked Then
+            dataListado.Columns.Item("eliminar").Visible = True
+        Else
+            dataListado.Columns.Item("eliminar").Visible = False
+        End If
 
     End Sub
+    Private Sub btnEiminar_Click(sender As Object, e As EventArgs) Handles btnEiminar.Click
+        Dim resultado As DialogResult
+        resultado = MessageBox.Show("Desea eliminar", "Eliminado", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+        If resultado = DialogResult.OK Then
+            Try
+                For Each row As DataGridViewRow In dataListado.Rows
+                    Dim marca As Boolean = Convert.ToBoolean(row.Cells("eliminar").Value)
+                    If marca Then
+
+                        Dim valores As Integer = Convert.ToInt32(row.Cells("idcliente").Value)
+                        Dim pdb As New pCliente
+                        Dim func As New fcliente
+                        pdb.gidCliente = valores
+                        If func.eliminar(pdb) Then
+                            MsgBox("Se elimino el cliente")
+                        Else
+                            MsgBox("No se puede eliminar")
+
+                        End If
+
+                    End If
+                Next
+                Call mostrar()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MsgBox("No fue eliminado")
+        End If
+    End Sub
+
 End Class
