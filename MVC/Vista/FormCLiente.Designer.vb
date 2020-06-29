@@ -22,6 +22,7 @@ Partial Class FormCLiente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtApellido = New System.Windows.Forms.TextBox()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
@@ -43,10 +44,12 @@ Partial Class FormCLiente
         Me.checkEliminar = New System.Windows.Forms.CheckBox()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
         Me.dataListado = New System.Windows.Forms.DataGridView()
+        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cbo = New System.Windows.Forms.ComboBox()
         Me.btnEiminar = New System.Windows.Forms.Button()
-        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.txtMarca = New System.Windows.Forms.TextBox()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -256,6 +259,14 @@ Partial Class FormCLiente
         Me.dataListado.Size = New System.Drawing.Size(696, 244)
         Me.dataListado.TabIndex = 18
         '
+        'eliminar
+        '
+        Me.eliminar.HeaderText = "Eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
         'txtBuscar
         '
         Me.txtBuscar.Location = New System.Drawing.Point(157, 32)
@@ -266,12 +277,12 @@ Partial Class FormCLiente
         'cbo
         '
         Me.cbo.FormattingEnabled = True
-        Me.cbo.Items.AddRange(New Object() {"ci", "nombre", "apellido"})
+        Me.cbo.Items.AddRange(New Object() {"id_cliente", "ci", "nombre", "apellido"})
         Me.cbo.Location = New System.Drawing.Point(15, 31)
         Me.cbo.Name = "cbo"
         Me.cbo.Size = New System.Drawing.Size(121, 21)
         Me.cbo.TabIndex = 0
-        Me.cbo.Text = "ci"
+        Me.cbo.Text = "id_cliente"
         '
         'btnEiminar
         '
@@ -282,19 +293,24 @@ Partial Class FormCLiente
         Me.btnEiminar.Text = "Eliminar"
         Me.btnEiminar.UseVisualStyleBackColor = True
         '
-        'eliminar
+        'txtMarca
         '
-        Me.eliminar.HeaderText = "Eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
-        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.txtMarca.Location = New System.Drawing.Point(-3, -1)
+        Me.txtMarca.Name = "txtMarca"
+        Me.txtMarca.Size = New System.Drawing.Size(100, 20)
+        Me.txtMarca.TabIndex = 18
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'FormCLiente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1222, 432)
+        Me.ClientSize = New System.Drawing.Size(1301, 469)
+        Me.Controls.Add(Me.txtMarca)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnEiminar)
         Me.Controls.Add(Me.GroupBox1)
@@ -306,6 +322,7 @@ Partial Class FormCLiente
         Me.GroupBox2.PerformLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -334,4 +351,6 @@ Partial Class FormCLiente
     Friend WithEvents btnGuardar As Button
     Friend WithEvents checkEliminar As CheckBox
     Friend WithEvents eliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents txtMarca As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

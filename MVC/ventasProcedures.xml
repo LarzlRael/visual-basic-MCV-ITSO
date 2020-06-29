@@ -1,0 +1,45 @@
+﻿create table venta(
+idventa int primary key identity,
+idcliente int,
+fecha_venta date,
+tipo_documento varchar(10),
+nro_documento varchar(20),
+FOREIGN KEY (idcliente) REFERENCES cliente(id_cliente)
+)
+
+select * from cliente
+exec mostrarVenta
+create procedure mostrarVenta
+as
+SELECT venta.idventa,venta.idcliente,cliente.nombre,cliente.ci,
+venta.fecha_venta, venta.tipo_documento,venta.nro_documento
+FROM dbo.cliente INNER JOIN
+DBO.venta ON cliente.id_cliente = venta.idcliente
+order by venta.idventa desc
+
+create procedure insertarVenta
+@idcliente as integer,
+@fecha_venta as date,
+@tipo_documento as varchar(50),
+@num_documento as varchar(50)
+as
+insert into venta(idcliente,fecha_venta,tipo_documento,nro_documento)
+values
+(@idcliente,@fecha_venta,@tipo_documento,@num_documento);
+
+
+create procedure editarVenta
+@idventa as integer,
+@idcliente as integer,
+@fecha_venta as date,
+@tipo_documento as varchar(50),
+@num_documento as varchar(50)
+as
+UPDATE venta set idcliente = @idcliente,fecha_venta = @fecha_venta,
+tipo_documento = @tipo_documento, nro_documento = @num_documento
+where idventa = @idventa;
+
+create procedure eliminarVentas
+@idventas as integer
+as
+DELETE from venta where idventa = @idventas;

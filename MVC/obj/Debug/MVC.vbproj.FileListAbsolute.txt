@@ -9,3 +9,7 @@ c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.exe
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.xml
 c:\users\larz\documents\visual studio 2015\Projects\MVC\MVC\obj\Debug\MVC.pdb
 C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.FormProducto.resources
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.vbprojResolveAssemblyReference.cache
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.formLogin.resources
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.principal.resources
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.formVenta.resources

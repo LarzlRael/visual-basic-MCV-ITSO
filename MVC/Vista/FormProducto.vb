@@ -9,7 +9,7 @@
         Try
             Dim func As New fproducto
             dt = func.mostrar
-            dataListado.Columns.Item("Eliminar").Visible = False
+            datalistado.Columns.Item("eliminar").Visible = False
             If dt.Rows.Count <> 0 Then
                 dataListado.DataSource = dt
                 txtBuscar.Enabled = True
@@ -83,7 +83,8 @@
 
 
     Private Sub dataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
-        txtid.Text = datalistado.SelectedCells.Item(1).Value
+
+        txtId.Text = datalistado.SelectedCells.Item(1).Value
         txtnombre.Text = datalistado.SelectedCells.Item(3).Value
         txtDescripcion.Text = datalistado.SelectedCells.Item(4).Value
         txtStock.Text = datalistado.SelectedCells.Item(5).Value
@@ -95,6 +96,10 @@
         btnEditar.Visible = True
         btnGuardar.Visible = False
 
+        If e.ColumnIndex = Me.datalistado.Columns.Item("eliminar").Index Then
+            Dim fila As DataGridViewCheckBoxCell = Me.datalistado.Rows(e.RowIndex).Cells("eliminar")
+            fila.Value = Not fila.Value
+        End If
 
     End Sub
 
@@ -143,4 +148,44 @@
             End Try
         End If
     End Sub
+
+    Private Sub checkEliminar_CheckedChanged(sender As Object, e As EventArgs) Handles checkEliminar.CheckedChanged
+        If checkEliminar.CheckState = CheckState.Checked Then
+            datalistado.Columns.Item("eliminar").Visible = True
+        Else
+            datalistado.Columns.Item("eliminar").Visible = False
+        End If
+
+    End Sub
+
+    Private Sub btnEiminar_Click(sender As Object, e As EventArgs) Handles btnEiminar.Click
+        Dim resultado As DialogResult
+        resultado = MessageBox.Show("¿Desea eliminar?", "Eliminado", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
+        If resultado = DialogResult.OK Then
+            Try
+                For Each row As DataGridViewRow In datalistado.Rows
+                    Dim marca As Boolean = Convert.ToBoolean(row.Cells("eliminar").Value)
+                    If marca Then
+
+                        Dim valores As Integer = Convert.ToInt32(row.Cells("id_producto").Value)
+                        Dim pdb As New pProducto
+                        Dim func As New fproducto
+                        pdb.gidProducto = valores
+                        If func.eliminarProducto(pdb) Then
+                            MsgBox("Se elimino El producto")
+                        Else
+                            MsgBox("No se puede eliminar")
+
+                        End If
+                    End If
+                Next
+                Call mostrar()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MsgBox("No fue eliminado")
+        End If
+    End Sub
+
 End Class

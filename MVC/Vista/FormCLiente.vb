@@ -8,7 +8,7 @@
         Try
             Dim func As New fcliente
             dt = func.mostrar
-            dataListado.Columns.Item("Eliminar").Visible = False
+            dataListado.Columns.Item("eliminar").Visible = False
             If dt.Rows.Count <> 0 Then
                 dataListado.DataSource = dt
                 txtBuscar.Enabled = True
@@ -161,7 +161,7 @@
                     Dim marca As Boolean = Convert.ToBoolean(row.Cells("eliminar").Value)
                     If marca Then
 
-                        Dim valores As Integer = Convert.ToInt32(row.Cells("idcliente").Value)
+                        Dim valores As Integer = Convert.ToInt32(row.Cells("id_cliente").Value)
                         Dim pdb As New pCliente
                         Dim func As New fcliente
                         pdb.gidCliente = valores
@@ -183,4 +183,11 @@
         End If
     End Sub
 
+    Private Sub dataListado_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataListado.CellContentDoubleClick
+        If txtMarca.Text = "marca" Then
+            formVenta.txtidcliente.Text = dataListado.SelectedCells.Item(1).Value
+            formVenta.txtnombre_cliente.Text = dataListado.SelectedCells.Item(2).Value
+            Me.Close()
+        End If
+    End Sub
 End Class
