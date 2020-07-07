@@ -13,3 +13,5 @@ C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.vbproj
 C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.formLogin.resources
 C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.principal.resources
 C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.formVenta.resources
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.formdetalleVenta.resources
+C:\Users\Larz\Documents\Visual Studio 2015\Projects\MVC\MVC\obj\Debug\MVC.frmCategoria.resources

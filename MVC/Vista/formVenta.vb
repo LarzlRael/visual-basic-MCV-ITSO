@@ -2,6 +2,7 @@
 
     Private Sub formVenta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         mostrar()
+        disable()
     End Sub
 
     Private dt As New DataTable
@@ -26,6 +27,7 @@
 
                 If func.Insertar(dts) Then
                     MessageBox.Show("Venta registrada")
+                    cargarDetalle()
                     mostrar()
                     limpiar()
                 Else
@@ -117,7 +119,7 @@
         End If
     End Sub
 
-    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim resultado As DialogResult
         resultado = MessageBox.Show("Desea eliminar", "Eliminado", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation)
         If resultado = DialogResult.OK Then
@@ -177,5 +179,24 @@
                 MsgBox(ex.Message)
             End Try
         End If
+    End Sub
+
+
+    Private Sub cargarDetalle()
+        formdetalleVenta.txtidVenta.Text = dataListado.SelectedCells.Item(1).Value
+        formdetalleVenta.txtidcliente.Text = dataListado.SelectedCells.Item(2).Value
+        formdetalleVenta.txtnombre.Text = dataListado.SelectedCells.Item(3).Value
+        formdetalleVenta.txtfecha.Text = dataListado.SelectedCells.Item(5).Value
+        formdetalleVenta.txtnum_documento.Text = dataListado.SelectedCells.Item(6).Value
+        formdetalleVenta.txtnum_documento.Text = dataListado.SelectedCells.Item(7).Value
+
+        formdetalleVenta.ShowDialog()
+
+    End Sub
+
+    Private Sub disable()
+        txtidVenta.Enabled = False
+        txtidcliente.Enabled = False
+        txtnombre_cliente.Enabled = False
     End Sub
 End Class

@@ -1,13 +1,15 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class fproducto
+Public Class fCategoria
+
+
     Inherits conexion
     Dim cmd As New SqlCommand
     Public Function mostrar() As DataTable
         Try
             conectado()
             'Tiene que estar creado el procedimiento almacenado en la base de datos
-            cmd = New SqlCommand("mostrar_productos")
+            cmd = New SqlCommand("mostrar_categorias")
             cmd.Connection = cnn
             If cmd.ExecuteNonQuery Then
                 Dim dt As New DataTable
@@ -24,22 +26,13 @@ Public Class fproducto
             desconectar()
         End Try
     End Function
-
-    Public Function Insertar(ByVal dts As pProducto) As Boolean
+    Public Function Insertar(ByVal dts As pCategoria) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("insertar_producto")
+            cmd = New SqlCommand("insertar_categoria")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
-            'insert into producto(nombre,descripcion,stock,precio_compra,precio_venta,fecha_vencimiento)
-            'values(@nombre,@descripcion,@stock,@precio_compra,@precio_venta,@fecha_vencimiento)
-            cmd.Parameters.AddWithValue("@id_categoria", dts.gIdCategoria)
-            cmd.Parameters.AddWithValue("@nombre", dts.gNombre)
-            cmd.Parameters.AddWithValue("@descripcion", dts.gDescripcion)
-            cmd.Parameters.AddWithValue("@stock", dts.gStock)
-            cmd.Parameters.AddWithValue("@precio_compra", dts.gPrecioCompra)
-            cmd.Parameters.AddWithValue("@precio_venta", dts.gPrecioVenta)
-            cmd.Parameters.AddWithValue("@fecha_vencimiento", dts.gFechaVencimiento)
+            cmd.Parameters.AddWithValue("@nombre_categoria", dts.gNombre_Categoria)
 
             'cmd.Parameters.AddWithValue("@nombre", dts.gNombre)
             If cmd.ExecuteNonQuery Then
@@ -54,20 +47,15 @@ Public Class fproducto
             desconectar()
         End Try
     End Function
-    Public Function editar(ByVal dts As pProducto) As Boolean
+
+    Public Function editar(ByVal dts As pCategoria) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("editar_producto")
-
+            cmd = New SqlCommand("editar_categoria")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
-            cmd.Parameters.AddWithValue("@id_producto", dts.gidProducto)
-            cmd.Parameters.AddWithValue("@nombre", dts.gNombre)
-            cmd.Parameters.AddWithValue("@descripcion", dts.gDescripcion)
-            cmd.Parameters.AddWithValue("@stock", dts.gStock)
-            cmd.Parameters.AddWithValue("@precio_compra", dts.gPrecioCompra)
-            cmd.Parameters.AddWithValue("@precio_venta", dts.gPrecioVenta)
-            cmd.Parameters.AddWithValue("@fecha_vencimiento", dts.gFechaVencimiento)
+            cmd.Parameters.AddWithValue("@idcategoria", dts.gIdcategoria)
+            cmd.Parameters.AddWithValue("@nombre_categoria", dts.gNombre_Categoria)
 
             If cmd.ExecuteNonQuery Then
                 Return True
@@ -80,17 +68,15 @@ Public Class fproducto
         Finally
             desconectar()
         End Try
-
     End Function
 
-
-    Public Function eliminarProducto(ByVal dts As pProducto) As Boolean
+    Public Function eliminar(ByVal dts As pCliente) As Boolean
         Try
             conectado()
-            cmd = New SqlCommand("eliminarProducto")
+            cmd = New SqlCommand("eliminar_categoria")
             cmd.CommandType = CommandType.StoredProcedure
             cmd.Connection = cnn
-            cmd.Parameters.Add("@id_producto", SqlDbType.NVarChar, 30).Value = dts.gidProducto
+            cmd.Parameters.Add("@id_categoria", SqlDbType.NVarChar, 30).Value = dts.gidCliente
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -101,4 +87,5 @@ Public Class fproducto
             Return False
         End Try
     End Function
+
 End Class

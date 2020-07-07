@@ -72,7 +72,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\pCategoria.vb" />
+    <Compile Include="Controlador\pDetalleVenta.vb" />
+    <Compile Include="Modelo\fCategoria.vb" />
     <Compile Include="Modelo\fcliente.vb" />
+    <Compile Include="Modelo\fDetalle.vb" />
     <Compile Include="Modelo\fproducto.vb" />
     <Compile Include="Modelo\fUsuario.vb" />
     <Compile Include="Controlador\pCliente.vb" />
@@ -102,6 +106,12 @@
     <Compile Include="Vista\FormCLiente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vista\formdetalleVenta.Designer.vb">
+      <DependentUpon>formdetalleVenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\formdetalleVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vista\formLogin.Designer.vb">
       <DependentUpon>formLogin.vb</DependentUpon>
     </Compile>
@@ -118,6 +128,12 @@
       <DependentUpon>formVenta.vb</DependentUpon>
     </Compile>
     <Compile Include="Vista\formVenta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\frmCategoria.Designer.vb">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\frmCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista\principal.Designer.vb">
@@ -137,6 +153,9 @@
     <EmbeddedResource Include="Vista\FormCLiente.resx">
       <DependentUpon>FormCLiente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\formdetalleVenta.resx">
+      <DependentUpon>formdetalleVenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\formLogin.resx">
       <DependentUpon>formLogin.vb</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\formVenta.resx">
       <DependentUpon>formVenta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\frmCategoria.resx">
+      <DependentUpon>frmCategoria.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\principal.resx">
       <DependentUpon>principal.vb</DependentUpon>

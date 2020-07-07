@@ -1,6 +1,6 @@
 ﻿Public Class pProducto
 
-    Dim idProducto As Integer
+    Dim idProducto, idCategoria As Integer
     Dim nombre, descripcion As String
     Dim precio_compra, precio_venta, stock As Double
     Dim fecha_vencimiento As Date
@@ -12,6 +12,9 @@
             idProducto = value
         End Set
     End Property
+
+
+
     Public Property gNombre
         Get
             Return nombre
@@ -63,12 +66,22 @@
         End Set
     End Property
 
+    Public Property gIdCategoria As Integer
+        Get
+            Return idCategoria
+        End Get
+        Set(value As Integer)
+            idCategoria = value
+        End Set
+    End Property
+
     Public Sub New()
 
     End Sub
     'Dim idCliente As Integer
     'precio_compra, precio_venta, stock DOuble
     Public Sub New(ByVal idProducto As Integer,
+                   ByVal idCategoria As String,
                    ByVal descripcion As String,
                    ByVal precio_compra As Double,
                    ByVal precio_venta As Double,
@@ -76,6 +89,7 @@
                    ByVal fecha_vencimiento As Date)
 
         gidProducto = idProducto
+        gIdCategoria = idCategoria
         gNombre = nombre
         gDescripcion = descripcion
         gPrecioCompra = precio_compra

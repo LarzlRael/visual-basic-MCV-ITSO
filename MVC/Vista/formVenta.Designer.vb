@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class formVenta
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,11 @@ Partial Class formVenta
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.cboTipoDocumento = New System.Windows.Forms.ComboBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
@@ -38,15 +40,13 @@ Partial Class formVenta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.checkEliminar = New System.Windows.Forms.CheckBox()
+        Me.dataListado = New System.Windows.Forms.DataGridView()
+        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.btnEliminar = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.cbotipodocumentbuscar = New System.Windows.Forms.ComboBox()
-        Me.cboTipoDocumento = New System.Windows.Forms.ComboBox()
-        Me.dataListado = New System.Windows.Forms.DataGridView()
-        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.checkEliminar = New System.Windows.Forms.CheckBox()
-        Me.btnEditar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -76,6 +76,25 @@ Partial Class formVenta
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Venta"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Location = New System.Drawing.Point(143, 289)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEditar.TabIndex = 18
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
+        '
+        'cboTipoDocumento
+        '
+        Me.cboTipoDocumento.FormattingEnabled = True
+        Me.cboTipoDocumento.Items.AddRange(New Object() {"boleta", "Factura"})
+        Me.cboTipoDocumento.Location = New System.Drawing.Point(118, 192)
+        Me.cboTipoDocumento.Name = "cboTipoDocumento"
+        Me.cboTipoDocumento.Size = New System.Drawing.Size(121, 21)
+        Me.cboTipoDocumento.TabIndex = 17
+        Me.cboTipoDocumento.Text = "Boleta"
         '
         'Button3
         '
@@ -202,7 +221,7 @@ Partial Class formVenta
         '
         Me.GroupBox2.Controls.Add(Me.checkEliminar)
         Me.GroupBox2.Controls.Add(Me.dataListado)
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.btnEliminar)
         Me.GroupBox2.Controls.Add(Me.CheckBox1)
         Me.GroupBox2.Controls.Add(Me.txtbuscar)
         Me.GroupBox2.Controls.Add(Me.cbotipodocumentbuscar)
@@ -213,14 +232,45 @@ Partial Class formVenta
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Listado ventas"
         '
-        'Button1
+        'checkEliminar
         '
-        Me.Button1.Location = New System.Drawing.Point(155, 345)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 14
-        Me.Button1.Text = "Eliminar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.checkEliminar.AutoSize = True
+        Me.checkEliminar.Location = New System.Drawing.Point(168, 49)
+        Me.checkEliminar.Name = "checkEliminar"
+        Me.checkEliminar.Size = New System.Drawing.Size(78, 17)
+        Me.checkEliminar.TabIndex = 21
+        Me.checkEliminar.Text = "Eliminar fila"
+        Me.checkEliminar.UseVisualStyleBackColor = True
+        '
+        'dataListado
+        '
+        Me.dataListado.AllowUserToAddRows = False
+        Me.dataListado.AllowUserToDeleteRows = False
+        Me.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataListado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminar})
+        Me.dataListado.Location = New System.Drawing.Point(20, 72)
+        Me.dataListado.Name = "dataListado"
+        Me.dataListado.ReadOnly = True
+        Me.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dataListado.Size = New System.Drawing.Size(544, 244)
+        Me.dataListado.TabIndex = 19
+        '
+        'eliminar
+        '
+        Me.eliminar.HeaderText = "Eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(155, 345)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(75, 23)
+        Me.btnEliminar.TabIndex = 14
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
         'CheckBox1
         '
@@ -248,56 +298,6 @@ Partial Class formVenta
         Me.cbotipodocumentbuscar.Size = New System.Drawing.Size(121, 21)
         Me.cbotipodocumentbuscar.TabIndex = 0
         Me.cbotipodocumentbuscar.Text = "nro_documentos"
-        '
-        'cboTipoDocumento
-        '
-        Me.cboTipoDocumento.FormattingEnabled = True
-        Me.cboTipoDocumento.Items.AddRange(New Object() {"boleta", "Factura"})
-        Me.cboTipoDocumento.Location = New System.Drawing.Point(118, 192)
-        Me.cboTipoDocumento.Name = "cboTipoDocumento"
-        Me.cboTipoDocumento.Size = New System.Drawing.Size(121, 21)
-        Me.cboTipoDocumento.TabIndex = 17
-        Me.cboTipoDocumento.Text = "Boleta"
-        '
-        'dataListado
-        '
-        Me.dataListado.AllowUserToAddRows = False
-        Me.dataListado.AllowUserToDeleteRows = False
-        Me.dataListado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataListado.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.eliminar})
-        Me.dataListado.Location = New System.Drawing.Point(20, 72)
-        Me.dataListado.Name = "dataListado"
-        Me.dataListado.ReadOnly = True
-        Me.dataListado.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dataListado.Size = New System.Drawing.Size(544, 244)
-        Me.dataListado.TabIndex = 19
-        '
-        'eliminar
-        '
-        Me.eliminar.HeaderText = "Eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
-        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        '
-        'checkEliminar
-        '
-        Me.checkEliminar.AutoSize = True
-        Me.checkEliminar.Location = New System.Drawing.Point(168, 49)
-        Me.checkEliminar.Name = "checkEliminar"
-        Me.checkEliminar.Size = New System.Drawing.Size(78, 17)
-        Me.checkEliminar.TabIndex = 21
-        Me.checkEliminar.Text = "Eliminar fila"
-        Me.checkEliminar.UseVisualStyleBackColor = True
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Location = New System.Drawing.Point(143, 289)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(75, 23)
-        Me.btnEditar.TabIndex = 18
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'formVenta
         '
@@ -335,7 +335,7 @@ Partial Class formVenta
     Friend WithEvents txtbuscar As TextBox
     Friend WithEvents cbotipodocumentbuscar As ComboBox
     Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents cboTipoDocumento As ComboBox
     Friend WithEvents dataListado As DataGridView
     Friend WithEvents eliminar As DataGridViewCheckBoxColumn

@@ -61,6 +61,7 @@
         Try
             Dim dts As New pProducto
             Dim func As New fproducto
+            dts.gIdCategoria = txtidcategoria.Text
             dts.gNombre = txtnombre.Text
             dts.gDescripcion = txtDescripcion.Text
             dts.gStock = CDbl(txtStock.Text)
@@ -84,13 +85,15 @@
 
     Private Sub dataListado_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellContentClick
 
-        txtId.Text = datalistado.SelectedCells.Item(1).Value
-        txtnombre.Text = datalistado.SelectedCells.Item(3).Value
-        txtDescripcion.Text = datalistado.SelectedCells.Item(4).Value
-        txtStock.Text = datalistado.SelectedCells.Item(5).Value
-        txtPrecioCompra.Text = datalistado.SelectedCells.Item(6).Value
-        txtPrecioVenta.Text = datalistado.SelectedCells.Item(7).Value
-        dtFechaVencimiento.Value = datalistado.SelectedCells.Item(8).Value
+        txtidcategoria.Text = datalistado.SelectedCells.Item(1).Value
+
+        txtId.Text = datalistado.SelectedCells.Item(8).Value
+        txtnombre.Text = datalistado.SelectedCells.Item(2).Value
+        txtDescripcion.Text = datalistado.SelectedCells.Item(3).Value
+        txtStock.Text = datalistado.SelectedCells.Item(4).Value
+        txtPrecioCompra.Text = datalistado.SelectedCells.Item(5).Value
+        txtPrecioVenta.Text = datalistado.SelectedCells.Item(6).Value
+        dtFechaVencimiento.Value = datalistado.SelectedCells.Item(7).Value
 
 
         btnEditar.Visible = True
@@ -188,4 +191,22 @@
         End If
     End Sub
 
+    Private Sub dataListado_CellontentDobleClick(sender As Object, e As DataGridViewCellEventArgs) Handles datalistado.CellDoubleClick
+        If marca.Text = "marca" Then
+            formVenta.txtidcliente.Text = datalistado.SelectedCells.Item(1).Value
+            formVenta.txtnombre_cliente.Text = datalistado.SelectedCells.Item(2).Value
+            Me.Close()
+            formdetalleVenta.txtidProducto.Text = datalistado.SelectedCells.Item(8).Value
+            formdetalleVenta.txtproducto.Text = datalistado.SelectedCells.Item(2).Value
+            formdetalleVenta.txtStock.Text = datalistado.SelectedCells.Item(4).Value
+            formdetalleVenta.txtpreciu_u.Text = datalistado.SelectedCells.Item(6).Value
+            Me.Close()
+
+        End If
+    End Sub
+
+    Private Sub btnCategoria_Click(sender As Object, e As EventArgs) Handles btnCategoria.Click
+        frmCategoria.txtmarca.Text = "marca"
+        frmCategoria.ShowDialog()
+    End Sub
 End Class

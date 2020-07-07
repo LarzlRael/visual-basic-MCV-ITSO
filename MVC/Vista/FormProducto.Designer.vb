@@ -23,6 +23,8 @@ Partial Class FormProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtidcategoria = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
         Me.label = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -45,10 +47,14 @@ Partial Class FormProducto
         Me.checkEliminar = New System.Windows.Forms.CheckBox()
         Me.inexistente = New System.Windows.Forms.LinkLabel()
         Me.datalistado = New System.Windows.Forms.DataGridView()
+        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.btnEiminar = New System.Windows.Forms.Button()
-        Me.eliminar = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.marca = New System.Windows.Forms.TextBox()
+        Me.txtnombreCategoria = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnCategoria = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,6 +62,11 @@ Partial Class FormProducto
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnCategoria)
+        Me.GroupBox1.Controls.Add(Me.Label8)
+        Me.GroupBox1.Controls.Add(Me.txtnombreCategoria)
+        Me.GroupBox1.Controls.Add(Me.txtidcategoria)
+        Me.GroupBox1.Controls.Add(Me.Label7)
         Me.GroupBox1.Controls.Add(Me.txtId)
         Me.GroupBox1.Controls.Add(Me.label)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
@@ -76,10 +87,26 @@ Partial Class FormProducto
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(335, 394)
+        Me.GroupBox1.Size = New System.Drawing.Size(422, 442)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de producto"
+        '
+        'txtidcategoria
+        '
+        Me.txtidcategoria.Location = New System.Drawing.Point(117, 45)
+        Me.txtidcategoria.Name = "txtidcategoria"
+        Me.txtidcategoria.Size = New System.Drawing.Size(47, 20)
+        Me.txtidcategoria.TabIndex = 26
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(26, 52)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(52, 13)
+        Me.Label7.TabIndex = 25
+        Me.Label7.Text = "Categoria"
         '
         'txtId
         '
@@ -99,7 +126,7 @@ Partial Class FormProducto
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(109, 324)
+        Me.btnGuardar.Location = New System.Drawing.Point(109, 354)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
         Me.btnGuardar.TabIndex = 22
@@ -108,7 +135,7 @@ Partial Class FormProducto
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(213, 324)
+        Me.btnCancelar.Location = New System.Drawing.Point(213, 354)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
         Me.btnCancelar.TabIndex = 21
@@ -117,7 +144,7 @@ Partial Class FormProducto
         '
         'btnEditar
         '
-        Me.btnEditar.Location = New System.Drawing.Point(109, 363)
+        Me.btnEditar.Location = New System.Drawing.Point(109, 393)
         Me.btnEditar.Name = "btnEditar"
         Me.btnEditar.Size = New System.Drawing.Size(75, 23)
         Me.btnEditar.TabIndex = 20
@@ -126,7 +153,7 @@ Partial Class FormProducto
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(6, 324)
+        Me.btnNuevo.Location = New System.Drawing.Point(6, 354)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
         Me.btnNuevo.TabIndex = 19
@@ -135,42 +162,42 @@ Partial Class FormProducto
         '
         'dtFechaVencimiento
         '
-        Me.dtFechaVencimiento.Location = New System.Drawing.Point(85, 285)
+        Me.dtFechaVencimiento.Location = New System.Drawing.Point(85, 300)
         Me.dtFechaVencimiento.Name = "dtFechaVencimiento"
         Me.dtFechaVencimiento.Size = New System.Drawing.Size(200, 20)
         Me.dtFechaVencimiento.TabIndex = 18
         '
         'txtPrecioVenta
         '
-        Me.txtPrecioVenta.Location = New System.Drawing.Point(117, 216)
+        Me.txtPrecioVenta.Location = New System.Drawing.Point(117, 231)
         Me.txtPrecioVenta.Name = "txtPrecioVenta"
         Me.txtPrecioVenta.Size = New System.Drawing.Size(100, 20)
         Me.txtPrecioVenta.TabIndex = 17
         '
         'txtPrecioCompra
         '
-        Me.txtPrecioCompra.Location = New System.Drawing.Point(117, 180)
+        Me.txtPrecioCompra.Location = New System.Drawing.Point(117, 195)
         Me.txtPrecioCompra.Name = "txtPrecioCompra"
         Me.txtPrecioCompra.Size = New System.Drawing.Size(100, 20)
         Me.txtPrecioCompra.TabIndex = 16
         '
         'txtStock
         '
-        Me.txtStock.Location = New System.Drawing.Point(117, 138)
+        Me.txtStock.Location = New System.Drawing.Point(117, 153)
         Me.txtStock.Name = "txtStock"
         Me.txtStock.Size = New System.Drawing.Size(100, 20)
         Me.txtStock.TabIndex = 15
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(117, 97)
+        Me.txtDescripcion.Location = New System.Drawing.Point(117, 112)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(100, 20)
         Me.txtDescripcion.TabIndex = 14
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(117, 56)
+        Me.txtnombre.Location = New System.Drawing.Point(117, 71)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(100, 20)
         Me.txtnombre.TabIndex = 13
@@ -178,7 +205,7 @@ Partial Class FormProducto
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(26, 254)
+        Me.Label6.Location = New System.Drawing.Point(26, 269)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(112, 13)
         Me.Label6.TabIndex = 5
@@ -187,7 +214,7 @@ Partial Class FormProducto
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(26, 180)
+        Me.Label5.Location = New System.Drawing.Point(26, 195)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(75, 13)
         Me.Label5.TabIndex = 4
@@ -196,7 +223,7 @@ Partial Class FormProducto
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(21, 223)
+        Me.Label4.Location = New System.Drawing.Point(21, 238)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(68, 13)
         Me.Label4.TabIndex = 3
@@ -205,7 +232,7 @@ Partial Class FormProducto
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(26, 145)
+        Me.Label3.Location = New System.Drawing.Point(26, 160)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 13)
         Me.Label3.TabIndex = 2
@@ -214,7 +241,7 @@ Partial Class FormProducto
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(26, 97)
+        Me.Label2.Location = New System.Drawing.Point(26, 112)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 1
@@ -223,7 +250,7 @@ Partial Class FormProducto
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 63)
+        Me.Label1.Location = New System.Drawing.Point(26, 78)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 0
@@ -236,9 +263,9 @@ Partial Class FormProducto
         Me.GroupBox2.Controls.Add(Me.datalistado)
         Me.GroupBox2.Controls.Add(Me.txtBuscar)
         Me.GroupBox2.Controls.Add(Me.cboBuscar)
-        Me.GroupBox2.Location = New System.Drawing.Point(366, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(527, 12)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(848, 400)
+        Me.GroupBox2.Size = New System.Drawing.Size(687, 400)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Lista de productos"
@@ -276,6 +303,13 @@ Partial Class FormProducto
         Me.datalistado.Size = New System.Drawing.Size(820, 321)
         Me.datalistado.TabIndex = 20
         '
+        'eliminar
+        '
+        Me.eliminar.HeaderText = "Eliminar"
+        Me.eliminar.Name = "eliminar"
+        Me.eliminar.ReadOnly = True
+        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
         'txtBuscar
         '
         Me.txtBuscar.Location = New System.Drawing.Point(170, 28)
@@ -295,25 +329,51 @@ Partial Class FormProducto
         '
         'btnEiminar
         '
-        Me.btnEiminar.Location = New System.Drawing.Point(397, 418)
+        Me.btnEiminar.Location = New System.Drawing.Point(579, 431)
         Me.btnEiminar.Name = "btnEiminar"
         Me.btnEiminar.Size = New System.Drawing.Size(75, 23)
         Me.btnEiminar.TabIndex = 23
         Me.btnEiminar.Text = "Eliminar"
         Me.btnEiminar.UseVisualStyleBackColor = True
         '
-        'eliminar
+        'marca
         '
-        Me.eliminar.HeaderText = "Eliminar"
-        Me.eliminar.Name = "eliminar"
-        Me.eliminar.ReadOnly = True
-        Me.eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.marca.Location = New System.Drawing.Point(1205, 12)
+        Me.marca.Name = "marca"
+        Me.marca.Size = New System.Drawing.Size(100, 20)
+        Me.marca.TabIndex = 25
+        '
+        'txtnombreCategoria
+        '
+        Me.txtnombreCategoria.Location = New System.Drawing.Point(234, 45)
+        Me.txtnombreCategoria.Name = "txtnombreCategoria"
+        Me.txtnombreCategoria.Size = New System.Drawing.Size(75, 20)
+        Me.txtnombreCategoria.TabIndex = 27
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(170, 52)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "IDCategoria"
+        '
+        'btnCategoria
+        '
+        Me.btnCategoria.Location = New System.Drawing.Point(325, 42)
+        Me.btnCategoria.Name = "btnCategoria"
+        Me.btnCategoria.Size = New System.Drawing.Size(75, 23)
+        Me.btnCategoria.TabIndex = 29
+        Me.btnCategoria.Text = "Seleccionar ..."
+        Me.btnCategoria.UseVisualStyleBackColor = True
         '
         'FormProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1317, 482)
+        Me.Controls.Add(Me.marca)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnEiminar)
@@ -325,6 +385,7 @@ Partial Class FormProducto
         Me.GroupBox2.PerformLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -355,4 +416,10 @@ Partial Class FormProducto
     Friend WithEvents label As Label
     Friend WithEvents checkEliminar As CheckBox
     Friend WithEvents eliminar As DataGridViewCheckBoxColumn
+    Friend WithEvents marca As TextBox
+    Friend WithEvents txtidcategoria As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents btnCategoria As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtnombreCategoria As TextBox
 End Class

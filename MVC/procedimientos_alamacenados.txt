@@ -1,0 +1,3 @@
+﻿Public Class procedimientos_alamacenados
+
+End Class
