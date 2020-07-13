@@ -87,8 +87,6 @@
         cboTipoDocumento.Text = dataListado.SelectedCells.Item(6).Value
         txtnum_documento.Text = dataListado.SelectedCells.Item(7).Value
 
-
-
         'btnEditar.Visible = True
         btnGuardar.Visible = False
 
@@ -198,5 +196,11 @@
         txtidVenta.Enabled = False
         txtidcliente.Enabled = False
         txtnombre_cliente.Enabled = False
+    End Sub
+
+    Private Sub dataListado_DoubleClick(sender As Object, e As EventArgs) Handles dataListado.DoubleClick
+        cargarDetalle()
+        mostrar()
+        limpiar()
     End Sub
 End Class

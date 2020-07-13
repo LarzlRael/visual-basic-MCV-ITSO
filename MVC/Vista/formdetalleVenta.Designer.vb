@@ -56,6 +56,7 @@ Partial Class formdetalleVenta
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dataListado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -147,6 +148,7 @@ Partial Class formdetalleVenta
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.txtproducto)
@@ -394,6 +396,15 @@ Partial Class formdetalleVenta
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "idVenta"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(277, 358)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Ver"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'formdetalleVenta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -448,4 +459,5 @@ Partial Class formdetalleVenta
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Button1 As Button
 End Class

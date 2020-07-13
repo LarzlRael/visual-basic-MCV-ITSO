@@ -22,5 +22,745 @@ MVC
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:MVC.db_ventasDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.categoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.detalle_ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.productoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.usuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_categoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_productosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarDetallesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarVentaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.reporteDetalle_ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.validacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.categoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.detalle_ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.productoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.usuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_categoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_productosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarDetallesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarVentaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.reporteDetalle_ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.validacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.categoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.detalle_ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.productoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.usuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_categoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrar_productosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarDetallesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.mostrarVentaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.reporteDetalle_ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet.validacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.categoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.detalle_ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.productoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.usuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.mostrar_categoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.mostrar_clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.mostrar_productosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.mostrarDetallesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.mostrarVentaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.reporteDetalle_ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.validacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(MVC.db_ventasDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(MVC.db_ventasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(MVC.db_ventasDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.UpdateAll(MVC.db_ventasDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.categoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.detalle_ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.logusuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.productoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.usuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.accesoUsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_categoriasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_clienteDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_productosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarDetallesDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarVentaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporte_usuarios_novalidosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporteDetalle_ventaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacionDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacion2DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verAccesoDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verificarUsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.categoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.detalle_ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.logusuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.productoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.usuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.accesoUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_categoriasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_clienteRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_productosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarDetallesRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarVentaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporte_usuarios_novalidosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporteDetalle_ventaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacionRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacion2Row">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verAccesoRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verificarUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.categoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.detalle_ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.logusuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.productoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.usuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.accesoUsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_categoriasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_clienteRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrar_productosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarDetallesRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.mostrarVentaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporte_usuarios_novalidosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.reporteDetalle_ventaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacionRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.validacion2RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verAccesoRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1.verificarUsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.categoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.detalle_ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.logusuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.productoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.usuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.accesoUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.mostrar_categoriasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.mostrar_clienteTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.mostrar_productosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.mostrarDetallesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.mostrarVentaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.reporte_usuarios_novalidosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.reporteDetalle_ventaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.validacionTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.validacion2TableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.verAccesoTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.verificarUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.QueriesTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.UpdateUpdatedRows(MVC.db_ventasDataSet1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.UpdateInsertedRows(MVC.db_ventasDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.UpdateDeletedRows(MVC.db_ventasDataSet1,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.UpdateAll(MVC.db_ventasDataSet1)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:MVC.db_ventasDataSet1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

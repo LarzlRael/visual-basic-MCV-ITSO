@@ -23,6 +23,9 @@ Partial Class FormProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnCategoria = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtnombreCategoria = New System.Windows.Forms.TextBox()
         Me.txtidcategoria = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtId = New System.Windows.Forms.TextBox()
@@ -52,9 +55,6 @@ Partial Class FormProducto
         Me.cboBuscar = New System.Windows.Forms.ComboBox()
         Me.btnEiminar = New System.Windows.Forms.Button()
         Me.marca = New System.Windows.Forms.TextBox()
-        Me.txtnombreCategoria = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnCategoria = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.datalistado, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +91,31 @@ Partial Class FormProducto
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Informacion de producto"
+        '
+        'btnCategoria
+        '
+        Me.btnCategoria.Location = New System.Drawing.Point(325, 42)
+        Me.btnCategoria.Name = "btnCategoria"
+        Me.btnCategoria.Size = New System.Drawing.Size(75, 23)
+        Me.btnCategoria.TabIndex = 29
+        Me.btnCategoria.Text = "Seleccionar ..."
+        Me.btnCategoria.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(170, 52)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(63, 13)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "IDCategoria"
+        '
+        'txtnombreCategoria
+        '
+        Me.txtnombreCategoria.Location = New System.Drawing.Point(234, 45)
+        Me.txtnombreCategoria.Name = "txtnombreCategoria"
+        Me.txtnombreCategoria.Size = New System.Drawing.Size(75, 20)
+        Me.txtnombreCategoria.TabIndex = 27
         '
         'txtidcategoria
         '
@@ -342,31 +367,6 @@ Partial Class FormProducto
         Me.marca.Name = "marca"
         Me.marca.Size = New System.Drawing.Size(100, 20)
         Me.marca.TabIndex = 25
-        '
-        'txtnombreCategoria
-        '
-        Me.txtnombreCategoria.Location = New System.Drawing.Point(234, 45)
-        Me.txtnombreCategoria.Name = "txtnombreCategoria"
-        Me.txtnombreCategoria.Size = New System.Drawing.Size(75, 20)
-        Me.txtnombreCategoria.TabIndex = 27
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(170, 52)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(63, 13)
-        Me.Label8.TabIndex = 28
-        Me.Label8.Text = "IDCategoria"
-        '
-        'btnCategoria
-        '
-        Me.btnCategoria.Location = New System.Drawing.Point(325, 42)
-        Me.btnCategoria.Name = "btnCategoria"
-        Me.btnCategoria.Size = New System.Drawing.Size(75, 23)
-        Me.btnCategoria.TabIndex = 29
-        Me.btnCategoria.Text = "Seleccionar ..."
-        Me.btnCategoria.UseVisualStyleBackColor = True
         '
         'FormProducto
         '

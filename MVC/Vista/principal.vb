@@ -97,4 +97,18 @@ Public Class principal
         FormCLiente.MdiParent = Me
         FormCLiente.Show()
     End Sub
+
+    Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ArticuloToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ArticuloToolStripMenuItem.Click
+        formVenta.MdiParent = Me
+        formVenta.Show()
+    End Sub
+
+    Private Sub TransaccionesInvalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TransaccionesInvalidasToolStripMenuItem.Click
+        FormReportUserNoValidate.MdiParent = Me
+        FormReportUserNoValidate.Show()
+    End Sub
 End Class

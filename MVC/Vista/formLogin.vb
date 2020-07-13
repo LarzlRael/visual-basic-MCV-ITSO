@@ -14,15 +14,23 @@
             dts.glogin = txtUsuario.Text
             dts.gpassword = txtPassword.Text
             If func.validacion_usaurio(dts) = True Then
+                usuarioModulo.gLogin = txtUsuario.Text
+
                 principal.Show()
+
                 Me.Hide()
             Else
                 MsgBox("Datos incorrecto")
                 txtPassword.Clear()
             End If
 
+
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

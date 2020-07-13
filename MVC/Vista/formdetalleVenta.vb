@@ -114,20 +114,30 @@
                         Dim onekey As Integer = Convert.ToInt32(row.Cells("iddetalle_venta").Value)
                         Dim vdb As New pDetalleVenta
                         Dim func As New fDetalle
+                        Dim userF As New fUsuario
+
                         vdb.giddetalle_venta = onekey
 
                         vdb.gidproducto = dataListado.SelectedCells.Item(3).Value
                         vdb.gIdventa = dataListado.SelectedCells.Item(2).Value
                         vdb.gCantidad = dataListado.SelectedCells.Item(5).Value
 
-                        If func.eliminarProducto(vdb) Then
-                            If func.aumentar_stock(vdb) Then
+
+                        If userF.verAcceso() Then
+                            If func.eliminarProducto(vdb) Then
+                                If func.aumentar_stock(vdb) Then
+                                    MsgBox("Borrado exitoso, usted esta activo")
+                                End If
+                            Else
+                                MsgBox("No se puede eliminar el registro")
 
                             End If
                         Else
-                            MsgBox("No se puede eliminar el registro")
-
+                            MsgBox("usted no es un usuario inactivo no puede realizar esta accion")
+                            userF.errorUsuario(onekey)
                         End If
+
+
 
                     End If
                 Next
@@ -183,5 +193,11 @@
         txtnombre.Enabled = False
         txtidProducto.Enabled = False
         txtproducto.Enabled = False
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        FormReporteDetalle.txtIdVenta.Text = Me.txtidVenta.Text
+        FormReporteDetalle.ShowDialog()
+
     End Sub
 End Class

@@ -1,3 +1,184 @@
-﻿Public Class procedimientos_alamacenados
+﻿
+create table detalle_venta(
+	iddetalle_venta int primary key identity,
+	idventa int not null,
+	id_producto int not null,
+	cantidad decimal,
+	precio_unitario decimal
+);
 
-End Class
+
+create procedure aumentarStocks
+@id_producto as integer,
+@cantidad as decimal(18,2)
+as
+update producto set stock = stock+@cantidad where id_producto=@id_producto
+
+
+exec mostrarDetalles
+
+create procedure mostrarDetalles
+as 
+select detalle_venta.iddetalle_venta,detalle_venta.idventa,detalle_venta.id_producto,
+producto.nombre,detalle_venta.cantidad,detalle_venta.precio_unitario
+from detalle_venta INNER JOIN
+producto ON detalle_venta.id_producto = dbo.producto.id_producto
+order by detalle_venta.iddetalle_venta desc;
+
+select * from producto;
+select * from detalle_venta;
+
+
+
+create procedure insertarDetalles
+@idventa as integer,
+@idproducto as integer,
+@cantidad as decimal(18,2),
+@precio_unitario as decimal(18,2)
+as
+insert into detalle_venta(idventa,id_producto,cantidad,precio_unitario) 
+values(@idventa,@idproducto,@cantidad,@precio_unitario);
+
+create procedure eliminarDetalles
+@iddetalle_venta as integer
+as 
+DELETE from detalle_venta where iddetalle_venta = @iddetalle_venta;
+
+create procedure editarDetalles
+@iddetalle_venta as integer,
+@idventas as integer,
+@idproducto as integer,
+@cantidad as decimal(18,2),
+@precio_unitario as decimal(18,2)
+as 
+update detalle_venta set idventa = @idventas, id_producto = @idproducto,
+cantidad = @cantidad,precio_unitario = @precio_unitario
+where iddetalle_venta = @iddetalle_venta;
+go
+
+create procedure disminuirStocks
+ @id_producto as integer,
+ @cantidad as decimal(18,2)
+ as 
+ update producto set stock = stock - @cantidad where id_producto = @id_producto;
+ go
+
+ create procedure aumentarStocks
+ @id_producto as integer,
+ @cantidad as decimal(18,2)
+ as 
+ update producto set stock = stock + @cantidad where id_producto = @id_producto;
+
+aLTER TABLE producto
+ALTER  COLUMN id_categoria int
+
+truncate table categorias
+
+select * from detalle_venta;
+truncate table detalle_venta;
+
+
+create table categorias(
+	id_categoria int primary key identity,
+	nombre_categoria varchar(100)
+);
+
+drop procedure insertar_categoria ;
+
+create procedure insertar_categoria 
+@nombre_categoria varchar(100)
+as 
+insert into categorias(nombre_categoria) values (@nombre_categoria)
+
+create procedure mostrar_categorias 
+as 
+select * from categorias;
+
+
+-- 
+create procedure editar_categoria
+@idcategoria int,
+@nombre_categoria varchar(100)
+as 
+UPDATE categorias set nombre_categoria = @nombre_categoria where id_categoria = @idcategoria
+
+
+create procedure eliminar_categoria
+@idcategoria int
+as 
+delete from categorias where id_categoria = @idcategoria
+
+
+
+-- para los reportes 
+
+
+
+
+select v.idventa,c.nombre,c.apellido,c.ci,p.nombre as producto,
+v.fecha_venta,v.tipo_documento,v.nro_documento,d.cantidad,
+d.precio_unitario,d.cantidad*d.precio_unitario as total
+from detalle_venta d
+inner join venta v on d.idventa=v.idventa
+inner join producto p on d.id_producto=p.id_producto
+inner join cliente c on v.idcliente=c.id_cliente;
+
+
+create procedure reporteDetalle_venta
+@idventa int
+as
+select v.idventa,c.nombre,c.apellido,c.ci,p.nombre as producto,
+v.fecha_venta,v.tipo_documento,v.nro_documento,d.cantidad,
+d.precio_unitario,d.cantidad*d.precio_unitario as total
+from detalle_venta d
+inner join venta v on d.idventa=v.idventa
+inner join producto p on d.id_producto=p.id_producto
+inner join cliente c on v.idcliente=c.id_cliente
+where v.idventa = @idventa
+go
+
+
+create table logusuarios(
+	id_logusuario int primary key identity,
+	id_usuario int,
+	iddetalle_venta int
+);
+select * from logusuarios;
+
+create procedure logUsuarioError
+@id_usuario int,
+@iddetalle_venta int
+as
+insert into logusuarios(id_usuario,iddetalle_venta)
+values (@id_usuario ,@iddetalle_venta)
+go
+
+create procedure logUsuarioError2
+@login varchar(100),
+@iddetalle_venta int
+as
+declare @id_usuario int
+SET @id_usuario =( select idusuario from usuario where 
+login =@login)
+insert into logusuarios(id_usuario,iddetalle_venta)values (@id_usuario ,@iddetalle_venta)
+go
+
+
+
+drop procedure verUsuariosNoValidos
+create procedure reporte_usuarios_novalidos
+as
+select u.nombre, u.apellidos , lg.iddetalle_venta,lg.fecha,
+dv.cantidad,p.nombre as nombre_producto,p.precio_venta
+from usuario as u
+inner join logusuarios lg ON u.idusuario = lg.id_usuario
+inner join detalle_venta dv on lg.iddetalle_venta = dv.iddetalle_venta
+inner join producto p on p.id_producto = 
+(select id_producto from detalle_venta where iddetalle_venta = lg.iddetalle_venta)
+go
+
+ 
+
+
+
+
